@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vladyslav Pushyn — CV</title>
+<link rel="stylesheet" href="./styles/styles.css">
+<script>window.__resources = {"https://unpkg.com/react@18.3.1/umd/react.production.min.js": "./js/react.production.min.js", "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "./js/react-dom.production.min.js"};</script>
+<script src="./js/app.js"></script>
+</head>
+<body>
+
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+</helmet>
+
+<div data-cv-theme="{{ theme }}" style="background:var(--bg0);min-height:100vh;transition:background .3s,color .3s;--accent:{{ accentColor }}">
+
+  <!-- ===== TOPBAR ===== -->
+  <div style="position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:16px;padding:11px clamp(14px,2.5vw,28px);background:var(--bg1);border-bottom:1px solid var(--line);transition:background .3s">
+    <div style="display:flex;gap:7px">
+      <span style="width:11px;height:11px;border-radius:50%;background:#f85149;display:block"></span>
+      <span style="width:11px;height:11px;border-radius:50%;background:#d29922;display:block"></span>
+      <span style="width:11px;height:11px;border-radius:50%;background:#3fb950;display:block"></span>
+    </div>
+    <span data-m="hide" style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--muted)">~/pushyn/cv — zsh</span>
+    <div data-m="hide" style="display:flex;gap:20px;margin-left:28px;font:500 12.5px 'JetBrains Mono',monospace">
+      <a href="#stack" style="color:var(--muted);transition:color .15s" style-hover="color:var(--accent)">./stack</a>
+      <a href="#experience" style="color:var(--muted);transition:color .15s" style-hover="color:var(--accent)">./experience</a>
+      <a href="#projects" style="color:var(--muted);transition:color .15s" style-hover="color:var(--accent)">./projects</a>
+      <a href="#contact" style="color:var(--muted);transition:color .15s" style-hover="color:var(--accent)">./contact</a>
+    </div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+      <span onclick="{{ setEN }}" style="{{ enBtnStyle }}" style-active="transform:scale(.9)">EN</span>
+      <span onclick="{{ setUA }}" style="{{ uaBtnStyle }}" style-active="transform:scale(.9)">UA</span>
+      <span onclick="{{ toggleTheme }}" style="font:600 12px 'JetBrains Mono',monospace;color:var(--muted);border:1px solid var(--line2);border-radius:6px;padding:4px 10px;cursor:pointer;user-select:none;transition:color .15s,border-color .15s" style-hover="color:var(--accent);border-color:var(--accent)" style-active="transform:scale(.94)">◐ {{ themeLabel }}</span>
+    </div>
+  </div>
+
+  <!-- ================= EN ================= -->
+  <sc-if value="{{ isEN }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width:1200px;margin:0 auto">
+
+    <!-- hero -->
+    <div data-screen-label="Hero EN" data-m="hero" style="display:grid;grid-template-columns:1fr 340px;grid-template-areas:'head photo' 'body photo';column-gap:clamp(28px,4.5vw,56px);row-gap:0;padding:clamp(30px,6vw,60px) clamp(18px,4.6vw,56px) clamp(26px,4.5vw,52px);background:radial-gradient(640px 320px at 82% 8%,var(--accentglow),transparent)">
+      <div style="grid-area:head;min-width:0">
+        <div style="font:500 14px 'JetBrains Mono',monospace;color:var(--muted);margin-bottom:20px"><span style="color:var(--accent)">$</span> whoami</div>
+        <h1 style="margin:0;font:800 clamp(38px,9.5vw,58px)/1.04 'Manrope',sans-serif;letter-spacing:-2.5px;color:var(--text)">Vladyslav<br>Pushyn</h1>
+        <div style="margin-top:16px;font:500 15.5px 'JetBrains Mono',monospace;color:var(--accent)">Python Full-Stack Developer / AI Engineer<span style="animation:blink 1.2s steps(1) infinite">_</span></div>
+      </div>
+      <div style="grid-area:body;min-width:0">
+        <p style="margin:24px 0 0;max-width:580px;font:400 15.5px/1.75 'IBM Plex Sans',sans-serif;color:var(--muted)">Python Full-Stack Developer / AI Engineer with 2+ years of commercial experience, specializing in AI-integrated products for e-commerce. Sole developer of 13 production projects in a 5-person team — full cycle from architecture to CI/CD and production: 50K+ lines of backend, 30K+ of frontend.</p>
+        <p style="margin:14px 0 0;max-width:580px;font:400 15.5px/1.75 'IBM Plex Sans',sans-serif;color:var(--muted)">Backend on FastAPI and async Python, frontend on React/TypeScript, deep LLM integration (OpenAI · Claude · Gemini) and DevOps on Docker/Nomad. I write clean, tested code — Clean Architecture, 2,000+ tests (pytest · Vitest · Playwright) — and own features end-to-end: from requirements to deployment and monitoring.</p>
+        <div style="margin-top:18px;font:400 12.5px/1.8 'JetBrains Mono',monospace;color:var(--faint)">// soft: ownership · self-management · fast learning · clear communication · Agile/Scrum</div>
+        <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+          <a href="mailto:pushyn.vladyslav@gmail.com" style="background:var(--accent);color:var(--onaccent);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 22px;border-radius:8px;transition:background .15s,transform .12s" style-hover="background:var(--accent2);color:var(--onaccent);transform:translateY(-2px)" style-active="transform:scale(.96)">pushyn.vladyslav@gmail.com</a>
+          <a href="https://github.com/HOKER1597" target="_blank" style="border:1px solid var(--line2);color:var(--text);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 20px;border-radius:8px;transition:border-color .15s,transform .12s" style-hover="border-color:var(--accent);color:var(--text);transform:translateY(-2px)" style-active="transform:scale(.96)">GitHub</a>
+          <a href="https://www.linkedin.com/in/pushyn-vladyslav1597/" target="_blank" style="border:1px solid var(--line2);color:var(--text);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 20px;border-radius:8px;transition:border-color .15s,transform .12s" style-hover="border-color:var(--accent);color:var(--text);transform:translateY(-2px)" style-active="transform:scale(.96)">LinkedIn</a>
+          <a href="https://t.me/acc0unt_nam3" target="_blank" style="border:1px solid var(--line2);color:var(--text);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 20px;border-radius:8px;transition:border-color .15s,transform .12s" style-hover="border-color:var(--accent);color:var(--text);transform:translateY(-2px)" style-active="transform:scale(.96)">Telegram</a>
+        </div>
+        <div style="margin-top:24px;font:400 12.5px 'JetBrains Mono',monospace;color:var(--faint)">// Kyiv, Ukraine — open to offers: remote or on-site · +380 50 773-86-70</div>
+      </div>
+      <div style="grid-area:photo;border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:var(--bg1);align-self:start">
+        <img src="./imagine/asset.png" alt="Vladyslav Pushyn" style="display:block;width:100%;height:400px;object-fit:cover;object-position:50% 0%">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;border-top:1px solid var(--line);font:500 12px 'JetBrains Mono',monospace;color:var(--muted)">
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:block;animation:pulse 2s infinite"></span>
+          status: open_to_work
+        </div>
+      </div>
+    </div>
+
+    <!-- stats -->
+    <div data-m="stats" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <div data-m="statcell" style="padding:22px 28px;border-right:1px solid var(--line)"><div style="font:800 34px 'Manrope',sans-serif;color:var(--text)">2+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">YEARS OF EXPERIENCE</div></div>
+      <div data-m="statcell" style="padding:22px 28px;border-right:1px solid var(--line)"><div style="font:800 34px 'Manrope',sans-serif;color:var(--accent)">35+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">PROJECTS BUILT · 13 IN PROD SOLO</div></div>
+      <div data-m="statcell" style="padding:22px 28px;border-right:1px solid var(--line)"><div style="font:800 34px 'Manrope',sans-serif;color:var(--text)">2K+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">AUTOMATED TESTS</div></div>
+      <div data-m="statcell" style="padding:22px 28px"><div style="font:800 34px 'Manrope',sans-serif;color:var(--text)">80K+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">LINES OF CODE</div></div>
+    </div>
+
+    <!-- stack -->
+    <div id="stack" data-screen-label="Stack EN" style="padding:clamp(28px,5vw,48px) clamp(18px,4.6vw,56px);scroll-margin-top:60px;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 35%">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px"><span style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent)">## tech_stack<span style="animation:blink 1.2s steps(1) infinite">_</span></span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px 32px">
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">BACKEND</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Python</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">FastAPI</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Node.js</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">SQLAlchemy</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Celery</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">WebSockets</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">SSE</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">FRONTEND</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">React 18/19</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">TypeScript</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Vue.js</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Tailwind</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Vite</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Ant Design</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:10px">AI / ML</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">OpenAI API</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">Claude API</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">Gemini</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">embeddings</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">NLP</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">PyTorch</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">scikit-learn</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">DATABASES</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">PostgreSQL</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">asyncpg</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Alembic</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">SQL</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">DEVOPS / AUTH</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Docker</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Nomad</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">GitLab CI/CD</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Nginx</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Keycloak</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">JWT</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">TESTING / SCRAPING</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">pytest</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Vitest</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Playwright E2E</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">BeautifulSoup</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">curl_cffi</span></div></div>
+      </div>
+    </div>
+
+    <!-- experience -->
+    <div id="experience" data-screen-label="Experience EN" style="padding:8px clamp(18px,4.6vw,56px) 44px;scroll-margin-top:60px">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px"><span style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent)">## experience<span style="animation:blink 1.2s steps(1) infinite">_</span></span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--accent)">2025.08 — now</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">remote</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">Python Full-Stack Developer <span style="color:var(--accent)">@ Amzprofessional</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>Sole developer of 13 production projects in a 5-person e-commerce (Amazon) team — full cycle: architecture, implementation, testing, CI/CD, production deployment (50K+ backend / 30K+ frontend LOC).</li>
+              <li>Unified internal platform integrating 5 AI tools: SSO (Keycloak), roles, generation history, export, admin panel, i18n — FastAPI + React, Docker, Nomad, GitLab CI/CD.</li>
+              <li>Multi-stage AI content pipelines (NLP, embeddings, cosine relevance, LLM generation) for product listings: titles, bullets, descriptions, keywords.</li>
+              <li>Large-scale scrapers processing thousands of marketplace pages: proxy rotation, browser impersonation, async ETL into PostgreSQL.</li>
+              <li>Audio/video transcription service with real-time speaker diarization (PyTorch, faster-whisper, WebSockets) — web + desktop builds.</li>
+              <li>Product &amp; returns analytics: TF-IDF review clustering, keyword scoring, AI recommendations; KPI/bonus system with dashboards and Excel export.</li>
+              <li>2,000+ automated tests — pytest, Vitest, Playwright E2E with video evidence; Clean Architecture.</li>
+            </ul>
+          </div>
+        </div>
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--muted)">2025.01 — 02</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">remote</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">QA Automation Engineer <span style="color:var(--accent)">@ DataArt</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>University internship: automated website testing in C#.</li>
+              <li>Designed and open-sourced a custom test-automation framework that removes boilerplate from test authoring — <a href="https://github.com/HOKER1597/Framework" target="_blank">github.com/Framework</a>.</li>
+              <li>Finished with the highest score among interns.</li>
+            </ul>
+          </div>
+        </div>
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--muted)">2023.03 — 2024.08</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">remote</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">Software Developer, freelance <span style="color:var(--accent)">@ Uvocorp</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>1.5 years of steady freelance delivery: custom applications in Java, C#, C++ and Python for international clients.</li>
+              <li>Full cycle on every order: requirements → design → implementation → testing → documentation.</li>
+              <li>API integrations, manual &amp; automated testing, direct client communication in English.</li>
+              <li>Public samples: <a href="https://github.com/HOKER1597/FloodItPart1" target="_blank">Flood-It game</a> · <a href="https://github.com/HOKER1597/TempCalculator" target="_blank">temperature calculator</a> · <a href="https://github.com/HOKER1597/Async" target="_blank">C# async demos</a>.</li>
+            </ul>
+          </div>
+        </div>
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--muted)">2022.01 — 02</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">remote</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">Front-end Developer, internship <span style="color:var(--accent)">@ WEZOM</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>Pixel-perfect site from a Figma design: ≤5px deviation, SVG sprites, hover/active states on every control, responsive layout with a UX focus.</li>
+              <li>Published to a public repo with a <a href="https://darling-twilight-ee1b8f.netlify.app" target="_blank">live demo</a>; highest internship score.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- projects -->
+    <div id="projects" data-screen-label="Projects EN" style="padding:8px clamp(18px,4.6vw,56px) 48px;scroll-margin-top:60px">
+      <div data-m="tight" style="display:flex;align-items:center;gap:14px;margin-bottom:26px"><span style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent)">## selected_projects<span style="animation:blink 1.2s steps(1) infinite">_</span></span><span style="flex:1;height:1px;background:var(--line)"></span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--faint)">13 shipped · showing 7</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px">
+        <div style="grid-column:1/-1;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4.2vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">01</span><span style="font:600 10px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:4px;padding:2px 6px">FLAGSHIP</span></div>
+          <div style="font:700 21px 'Manrope',sans-serif;color:var(--text);margin-top:10px">AI Listing Optimization Platform</div>
+          <p style="margin:8px 0 0;max-width:920px;font:400 14px/1.65 'IBM Plex Sans',sans-serif;color:var(--muted)">The company's flagship product, designed and built end-to-end by me: the platform takes a marketplace product and returns a fully optimized listing — copy, a designer-ready brief and a set of images. On top: SSO (Keycloak), roles, generation history, i18n and 11 UI themes.</p>
+          <div data-m="stack" style="display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin:20px 0 18px">
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">DATA LAYER</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Parallel async collection from 10+ sources over an SSE stream: scraping with proxy rotation and captcha detection, keyword APIs, search analytics, a trademark registry and review feeds with TF-IDF + KMeans clustering — merged into a single analysis object.</p></div>
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">SEO ENGINE</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">A 12-stage generation pipeline: keyword scoring on 6 axes with hard/soft gates, LLM distribution across listing zones, 3 copy variants and ~19 automated validations, with checkpoint/resume after failures.</p></div>
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">DESIGN BRIEFS &amp; IMAGES</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">A 9-module analysis conveyor turns market data into a production-ready spec for designers, then generates 9 listing images with vision-guided prompts and per-image regeneration.</p></div>
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">ZERO-TO-LISTING MODE</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">A 14-stage state machine builds a complete listing from a single product brief: semantic anchor, attribute audit, key-map distribution and 22 final checks with a rollback policy.</p></div>
+          </div>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · React 18 · OpenRouter (Claude / GPT / Gemini) · OpenAI embeddings · Playwright · PostgreSQL · Keycloak SSO · Docker/Nomad · GitLab CI/CD</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">02</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">LLM Pipeline Builder</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Constructor for multi-step LLM workflows: flexible steps with their own models and settings, chained results and live streaming — with the option to swap AI for custom scripts.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · SSE · OpenRouter · OpenAI</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">03</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Product &amp; Returns Analytics</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">ETL service that aggregates sales and returns data on a schedule: async ingestion into PostgreSQL with cluster-safe locking, TF-IDF review clustering, red-flag thresholds for problem products and LLM recommendations with per-call cost logging.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · SQLAlchemy async · APScheduler · React</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">04</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Market Category Scanner</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">High-volume scraper monitoring 22,000+ marketplace categories: proxy rotation, browser impersonation and captcha detection keep it stable at scale, while embeddings + cosine similarity surface underserved niches worth entering.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">curl_cffi · asyncpg · React 19 · Tailwind 4</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">05</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Speech Intelligence Service</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Audio/video transcription with real-time speaker diarization on GPU models, live sessions and call automation; streaming UI over WebSockets, shipped as both web and desktop builds.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · WebSockets · PyTorch · faster-whisper</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">06</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Team Performance System</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Bonus engine for a dev team: scoring formulas with quality/speed/returns coefficients, team dashboards, full period lifecycle, Excel export, email notifications and JWT auth.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">Node.js · Express · PostgreSQL · React</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">07</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">E-commerce Storefront &amp; CMS</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Full storefront for a premium home-goods brand: catalog on PostgreSQL (12 tables), admin CMS with inline editing, wholesale requests, partner/affiliate program, newsletter, JWT auth and rate limiting.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">Node.js · Express · PostgreSQL (12 tables) · JWT</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- education + contact -->
+    <div id="contact" data-screen-label="Contact EN" data-m="stack" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);scroll-margin-top:60px">
+      <div data-m="nobr" style="padding:clamp(26px,5vw,40px) clamp(18px,4.6vw,56px);border-right:1px solid var(--line)">
+        <div style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:20px">## education<span style="animation:blink 1.2s steps(1) infinite">_</span></div>
+        <div style="font:700 15.5px 'Manrope',sans-serif;color:var(--text)">Kherson National Technical University</div>
+        <div style="margin-top:6px;font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:var(--muted)">Software Engineering (121)<br>Master's — 2024–2026 · Bachelor's — 2020–2024</div>
+        <div style="margin-top:18px;font:400 12.5px/1.8 'JetBrains Mono',monospace;color:var(--faint)">+ Software Testing Fundamentals — Prometheus, 2025<br>+ GoIT — English HTML, 2024</div>
+        <div style="margin-top:18px;font:400 12.5px 'JetBrains Mono',monospace;color:var(--muted)">lang: UA — native · EN — working proficiency</div>
+      </div>
+      <div style="padding:clamp(26px,5vw,40px) clamp(18px,4.6vw,56px)">
+        <div style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:8px">## contact<span style="animation:blink 1.2s steps(1) infinite">_</span></div>
+        <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:var(--muted);margin-bottom:14px">Write a message — I'll reply to your email.</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <input ref="{{ emailRef }}" placeholder="Email" style="background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:12px 14px;font:400 14px 'IBM Plex Sans',sans-serif;color:var(--text);outline:none;width:100%;box-sizing:border-box">
+          <textarea ref="{{ msgRef }}" placeholder="Message" style="background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:12px 14px;font:400 14px 'IBM Plex Sans',sans-serif;color:var(--text);outline:none;min-height:84px;resize:vertical;width:100%;box-sizing:border-box"></textarea>
+          <button onclick="{{ sendMail }}" style="background:var(--accent);color:var(--onaccent);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px;border:none;border-radius:8px;cursor:pointer;transition:background .15s,transform .12s" style-hover="background:var(--accent2)" style-active="transform:scale(.98)">$ send --message</button>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><div style="display:flex;align-items:center;gap:8px;font:500 12.5px 'JetBrains Mono',monospace;color:var(--green);margin-top:2px"><span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:block"></span>message sent — thank you, I'll reply soon</div></sc-if>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ================= UA ================= -->
+  <sc-if value="{{ isUK }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1200px;margin:0 auto">
+
+    <!-- hero -->
+    <div data-screen-label="Hero UA" data-m="hero" style="display:grid;grid-template-columns:1fr 340px;grid-template-areas:'head photo' 'body photo';column-gap:clamp(28px,4.5vw,56px);row-gap:0;padding:clamp(30px,6vw,60px) clamp(18px,4.6vw,56px) clamp(26px,4.5vw,52px);background:radial-gradient(640px 320px at 82% 8%,var(--accentglow),transparent)">
+      <div style="grid-area:head;min-width:0">
+        <div style="font:500 14px 'JetBrains Mono',monospace;color:var(--muted);margin-bottom:20px"><span style="color:var(--accent)">$</span> whoami</div>
+        <h1 style="margin:0;font:800 clamp(38px,9.5vw,58px)/1.04 'Manrope',sans-serif;letter-spacing:-2px;color:var(--text)">Владислав<br>Пушин</h1>
+        <div style="margin-top:16px;font:500 15.5px 'JetBrains Mono',monospace;color:var(--accent)">Python Full-Stack Developer / AI Engineer<span style="animation:blink 1.2s steps(1) infinite">_</span></div>
+      </div>
+      <div style="grid-area:body;min-width:0">
+        <p style="margin:24px 0 0;max-width:580px;font:400 15.5px/1.75 'IBM Plex Sans',sans-serif;color:var(--muted)">Python Full-Stack розробник / AI-інженер із 2+ роками комерційного досвіду. Спеціалізація — AI-інтегровані продукти для e-commerce. Єдиний розробник 13 продакшн-проєктів у команді з 5 осіб — повний цикл від архітектури до CI/CD і деплою: 50K+ рядків бекенду, 30K+ фронтенду.</p>
+        <p style="margin:14px 0 0;max-width:580px;font:400 15.5px/1.75 'IBM Plex Sans',sans-serif;color:var(--muted)">Бекенд на FastAPI та async Python, фронтенд на React/TypeScript, глибока інтеграція LLM (OpenAI · Claude · Gemini), DevOps на Docker/Nomad. Пишу чистий, покритий тестами код — Clean Architecture, 2 000+ тестів (pytest · Vitest · Playwright) — і веду фічі end-to-end: від вимог до деплою й моніторингу.</p>
+        <div style="margin-top:18px;font:400 12.5px/1.8 'JetBrains Mono',monospace;color:var(--faint)">// soft: відповідальність · самоорганізація · швидке навчання · чітка комунікація · Agile/Scrum</div>
+        <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
+          <a href="mailto:pushyn.vladyslav@gmail.com" style="background:var(--accent);color:var(--onaccent);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 22px;border-radius:8px;transition:background .15s,transform .12s" style-hover="background:var(--accent2);color:var(--onaccent);transform:translateY(-2px)" style-active="transform:scale(.96)">pushyn.vladyslav@gmail.com</a>
+          <a href="https://github.com/HOKER1597" target="_blank" style="border:1px solid var(--line2);color:var(--text);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 20px;border-radius:8px;transition:border-color .15s,transform .12s" style-hover="border-color:var(--accent);color:var(--text);transform:translateY(-2px)" style-active="transform:scale(.96)">GitHub</a>
+          <a href="https://www.linkedin.com/in/pushyn-vladyslav1597/" target="_blank" style="border:1px solid var(--line2);color:var(--text);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 20px;border-radius:8px;transition:border-color .15s,transform .12s" style-hover="border-color:var(--accent);color:var(--text);transform:translateY(-2px)" style-active="transform:scale(.96)">LinkedIn</a>
+          <a href="https://t.me/acc0unt_nam3" target="_blank" style="border:1px solid var(--line2);color:var(--text);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px 20px;border-radius:8px;transition:border-color .15s,transform .12s" style-hover="border-color:var(--accent);color:var(--text);transform:translateY(-2px)" style-active="transform:scale(.96)">Telegram</a>
+        </div>
+        <div style="margin-top:24px;font:400 12.5px 'JetBrains Mono',monospace;color:var(--faint)">// Київ — відкритий до пропозицій: віддалено або офіс · +380 50 773-86-70</div>
+      </div>
+      <div style="grid-area:photo;border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:var(--bg1);align-self:start">
+        <img src="./imagine/asset.png" alt="Владислав Пушин" style="display:block;width:100%;height:400px;object-fit:cover;object-position:50% 0%">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;border-top:1px solid var(--line);font:500 12px 'JetBrains Mono',monospace;color:var(--muted)">
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:block;animation:pulse 2s infinite"></span>
+          статус: відкритий_до_пропозицій
+        </div>
+      </div>
+    </div>
+
+    <!-- stats -->
+    <div data-m="stats" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <div data-m="statcell" style="padding:22px 28px;border-right:1px solid var(--line)"><div style="font:800 34px 'Manrope',sans-serif;color:var(--text)">2+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">РОКИ ДОСВІДУ</div></div>
+      <div data-m="statcell" style="padding:22px 28px;border-right:1px solid var(--line)"><div style="font:800 34px 'Manrope',sans-serif;color:var(--accent)">35+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">ПРОЄКТІВ · 13 СОЛО В ПРОДАКШНІ</div></div>
+      <div data-m="statcell" style="padding:22px 28px;border-right:1px solid var(--line)"><div style="font:800 34px 'Manrope',sans-serif;color:var(--text)">2K+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">АВТОТЕСТІВ</div></div>
+      <div data-m="statcell" style="padding:22px 28px"><div style="font:800 34px 'Manrope',sans-serif;color:var(--text)">80K+</div><div style="font:500 11.5px 'JetBrains Mono',monospace;color:var(--muted);margin-top:4px">РЯДКІВ КОДУ</div></div>
+    </div>
+
+    <!-- stack -->
+    <div id="stack" data-screen-label="Stack UA" style="padding:clamp(28px,5vw,48px) clamp(18px,4.6vw,56px);scroll-margin-top:60px;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 35%">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px"><span style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent)">## стек_технологій<span style="animation:blink 1.2s steps(1) infinite">_</span></span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px 32px">
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">BACKEND</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Python</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">FastAPI</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Node.js</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">SQLAlchemy</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Celery</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">WebSockets</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">SSE</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">FRONTEND</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">React 18/19</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">TypeScript</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Vue.js</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Tailwind</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Vite</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Ant Design</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:10px">AI / ML</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">OpenAI API</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">Claude API</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">Gemini</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">ембедінги</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">NLP</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">PyTorch</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:6px;padding:4px 10px">scikit-learn</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">БАЗИ ДАНИХ</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">PostgreSQL</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">asyncpg</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Alembic</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">SQL</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">DEVOPS / АВТОРИЗАЦІЯ</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Docker</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Nomad</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">GitLab CI/CD</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Nginx</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Keycloak</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">JWT</span></div></div>
+        <div><div style="font:600 11.5px 'JetBrains Mono',monospace;color:var(--faint);margin-bottom:10px">ТЕСТУВАННЯ / СКРАПІНГ</div><div style="display:flex;flex-wrap:wrap;gap:7px"><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">pytest</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Vitest</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">Playwright E2E</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">BeautifulSoup</span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--text);border:1px solid var(--line2);border-radius:6px;padding:4px 10px">curl_cffi</span></div></div>
+      </div>
+    </div>
+
+    <!-- experience -->
+    <div id="experience" data-screen-label="Experience UA" style="padding:8px clamp(18px,4.6vw,56px) 44px;scroll-margin-top:60px">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px"><span style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent)">## досвід<span style="animation:blink 1.2s steps(1) infinite">_</span></span><span style="flex:1;height:1px;background:var(--line)"></span></div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--accent)">2025.08 — зараз</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">віддалено</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">Python Full-Stack Developer <span style="color:var(--accent)">@ Amzprofessional</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>Єдиний розробник 13 продакшн-проєктів у команді з 5 осіб (e-commerce/Amazon) — повний цикл: архітектура, реалізація, тестування, CI/CD, деплой (50K+ бекенд / 30K+ фронтенд).</li>
+              <li>Єдина внутрішня платформа з 5 AI-інструментами: SSO (Keycloak), ролі, історія генерацій, експорт, адмін-панель, i18n — FastAPI + React, Docker, Nomad, GitLab CI/CD.</li>
+              <li>Багатоетапні AI-пайплайни контенту (NLP, ембедінги, cosine-релевантність, LLM-генерація) для карток товарів: заголовки, буллети, описи, ключові слова.</li>
+              <li>Масштабні скрапери на тисячі сторінок маркетплейсу: ротація проксі, browser impersonation, async ETL у PostgreSQL.</li>
+              <li>Сервіс транскрибації аудіо/відео з real-time діаризацією спікерів (PyTorch, faster-whisper, WebSockets) — веб + десктоп.</li>
+              <li>Аналітика товарів і повернень: TF-IDF кластеризація відгуків, скоринг, AI-рекомендації; система KPI-бонусів з дашбордами та Excel-експортом.</li>
+              <li>2 000+ автотестів — pytest, Vitest, Playwright E2E з відео-доказами; Clean Architecture.</li>
+            </ul>
+          </div>
+        </div>
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--muted)">2025.01 — 02</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">віддалено</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">QA Automation Engineer <span style="color:var(--accent)">@ DataArt</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>Практика від університету: автоматизоване тестування веб-сайтів на C#.</li>
+              <li>Розробив і опублікував власний фреймворк автоматизації, що прибирає boilerplate з написання тестів — <a href="https://github.com/HOKER1597/Framework" target="_blank">github.com/Framework</a>.</li>
+              <li>Найвищий бал серед практикантів.</li>
+            </ul>
+          </div>
+        </div>
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--muted)">2023.03 — 2024.08</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">віддалено</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">Software Developer, фріланс <span style="color:var(--accent)">@ Uvocorp</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>1,5 роки стабільного фрілансу: кастомні застосунки на Java, C#, C++ та Python для міжнародних клієнтів.</li>
+              <li>Повний цикл на кожному замовленні: вимоги → проєктування → реалізація → тестування → документація.</li>
+              <li>Інтеграції API, мануальне й автоматизоване тестування, пряма комунікація з клієнтами англійською.</li>
+              <li>Публічні приклади: <a href="https://github.com/HOKER1597/FloodItPart1" target="_blank">гра Flood-It</a> · <a href="https://github.com/HOKER1597/TempCalculator" target="_blank">калькулятор температур</a> · <a href="https://github.com/HOKER1597/Async" target="_blank">C# async-демо</a>.</li>
+            </ul>
+          </div>
+        </div>
+        <div data-m="stack" style="display:grid;grid-template-columns:190px 1fr;gap:24px;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div><div style="font:500 12.5px 'JetBrains Mono',monospace;color:var(--muted)">2022.01 — 02</div><div style="font:400 12px 'JetBrains Mono',monospace;color:var(--faint);margin-top:4px">віддалено</div></div>
+          <div>
+            <div style="font:700 19px 'Manrope',sans-serif;color:var(--text)">Front-end Developer, практика <span style="color:var(--accent)">@ WEZOM</span></div>
+            <ul style="margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:7px;font:400 14px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">
+              <li>Pixel-perfect верстка за макетом Figma: відхилення ≤5px, SVG-спрайти, hover/active-стани для всіх контролів, адаптив з фокусом на UX.</li>
+              <li>Опубліковано в публічному репозиторії з <a href="https://darling-twilight-ee1b8f.netlify.app" target="_blank">живим демо</a>; найвищий бал.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- projects -->
+    <div id="projects" data-screen-label="Projects UA" style="padding:8px clamp(18px,4.6vw,56px) 48px;scroll-margin-top:60px">
+      <div data-m="tight" style="display:flex;align-items:center;gap:14px;margin-bottom:26px"><span style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent)">## вибрані_проєкти<span style="animation:blink 1.2s steps(1) infinite">_</span></span><span style="flex:1;height:1px;background:var(--line)"></span><span style="font:500 12px 'JetBrains Mono',monospace;color:var(--faint)">13 в продакшні · показано 7</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px">
+        <div style="grid-column:1/-1;background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:clamp(18px,4vw,26px) clamp(16px,4.2vw,30px);transition:border-color .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">01</span><span style="font:600 10px 'JetBrains Mono',monospace;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:4px;padding:2px 6px">ФЛАГМАН</span></div>
+          <div style="font:700 21px 'Manrope',sans-serif;color:var(--text);margin-top:10px">AI-платформа оптимізації лістингів</div>
+          <p style="margin:8px 0 0;max-width:920px;font:400 14px/1.65 'IBM Plex Sans',sans-serif;color:var(--muted)">Флагманський продукт компанії, який я спроєктував і побудував end-to-end: платформа бере товар маркетплейсу і повертає повністю оптимізований лістинг — тексти, готове ТЗ для дизайнера та набір зображень. Зверху: SSO (Keycloak), ролі, історія генерацій, i18n та 11 тем інтерфейсу.</p>
+          <div data-m="stack" style="display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;margin:20px 0 18px">
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">ШАР ДАНИХ</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Паралельний async-збір з 10+ джерел через SSE-стрім: скрапінг з ротацією проксі та детекцією captcha, API ключових слів, пошукова аналітика, реєстр торгових марок і стрічки відгуків з TF-IDF + KMeans кластеризацією — усе зливається в єдиний об'єкт аналізу.</p></div>
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">SEO-ДВИГУН</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">12-стадійний пайплайн генерації: скоринг ключів по 6 осях з hard/soft-гейтами, LLM-розподіл по зонах лістингу, 3 варіанти текстів і ~19 автоматичних валідацій, з checkpoint/resume після збоїв.</p></div>
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">ДИЗАЙН-ТЗ ТА ЗОБРАЖЕННЯ</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">9-модульний конвеєр аналізу перетворює ринкові дані на production-ready ТЗ для дизайнерів, а далі генерує 9 зображень лістингу за vision-промптами з регенерацією окремих кадрів.</p></div>
+            <div><div style="font:600 11px 'JetBrains Mono',monospace;color:var(--accent);letter-spacing:.08em">ЛІСТИНГ З НУЛЯ</div><p style="margin:6px 0 0;font:400 13px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">14-стадійна state-machine будує повний лістинг з одного продукт-брифу: семантичний якір, аудит атрибутів, розподіл key map та 22 фінальні перевірки з політикою відкатів.</p></div>
+          </div>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · React 18 · OpenRouter (Claude / GPT / Gemini) · OpenAI embeddings · Playwright · PostgreSQL · Keycloak SSO · Docker/Nomad · GitLab CI/CD</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">02</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Конструктор LLM-пайплайнів</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Конструктор багатокрокових LLM-задач: гнучкі кроки з власними моделями й налаштуваннями, ланцюжок результатів і стрімінг у реальному часі — з можливістю замінити AI на власний скрипт.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · SSE · OpenRouter · OpenAI</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">03</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Аналітика товарів і повернень</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">ETL-сервіс, що за розкладом агрегує дані продажів і повернень: async-завантаження в PostgreSQL з cluster-safe блокуваннями, TF-IDF кластеризація відгуків, пороги «червоних» товарів та LLM-рекомендації з обліком вартості кожного виклику.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · SQLAlchemy async · APScheduler · React</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">04</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Сканер категорій маркетплейсу</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Високонавантажений скрапер, що моніторить 22 000+ категорій маркетплейсу: ротація проксі, browser impersonation і детекція captcha тримають його стабільним на масштабі, а ембедінги + cosine similarity знаходять недооцінені ніші.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">curl_cffi · asyncpg · React 19 · Tailwind 4</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">05</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Сервіс розпізнавання мовлення</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Транскрибація аудіо/відео з real-time діаризацією спікерів на GPU-моделях, live-сесії та автоматизація дзвінків; стрімінговий інтерфейс на WebSockets, зібрано у веб- і десктоп-версіях.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">FastAPI · WebSockets · PyTorch · faster-whisper</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">06</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">Система KPI та бонусів</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Двигун бонусів для команди розробки: формули оцінки з коефіцієнтами якості/швидкості/повернень, командні дашборди, повний життєвий цикл періодів, Excel-експорт, email-нотифікації та JWT-авторизація.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">Node.js · Express · PostgreSQL · React</div>
+        </div>
+        <div style="background:var(--bg1);border:1px solid var(--line);border-radius:12px;padding:22px;transition:border-color .15s,transform .15s;animation:rvl .8s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 0% entry 30%" style-hover="border-color:var(--accent);transform:translateY(-3px)">
+          <div style="font:600 12px 'JetBrains Mono',monospace;color:var(--accent)">07</div>
+          <div style="font:700 17px 'Manrope',sans-serif;color:var(--text);margin-top:8px">E-commerce сайт із CMS</div>
+          <p style="margin:8px 0 14px;font:400 13.5px/1.6 'IBM Plex Sans',sans-serif;color:var(--muted)">Повноцінний магазин для бренду преміальних товарів для дому: каталог на PostgreSQL (12 таблиць), адмін-CMS з inline-редагуванням, оптові заявки, партнерська/афіліат-програма, розсилка, JWT-авторизація та rate-лімітинг.</p>
+          <div style="font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">Node.js · Express · PostgreSQL (12 tables) · JWT</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- education + contact -->
+    <div id="contact" data-screen-label="Contact UA" data-m="stack" style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);scroll-margin-top:60px">
+      <div data-m="nobr" style="padding:clamp(26px,5vw,40px) clamp(18px,4.6vw,56px);border-right:1px solid var(--line)">
+        <div style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:20px">## освіта<span style="animation:blink 1.2s steps(1) infinite">_</span></div>
+        <div style="font:700 15.5px 'Manrope',sans-serif;color:var(--text)">Херсонський національний технічний університет</div>
+        <div style="margin-top:6px;font:400 13.5px/1.7 'IBM Plex Sans',sans-serif;color:var(--muted)">Інженерія програмного забезпечення (121)<br>Магістратура — 2024–2026 · Бакалаврат — 2020–2024</div>
+        <div style="margin-top:18px;font:400 12.5px/1.8 'JetBrains Mono',monospace;color:var(--faint)">+ Основи тестування ПЗ — Prometheus, 2025<br>+ GoIT — English HTML, 2024</div>
+        <div style="margin-top:18px;font:400 12.5px 'JetBrains Mono',monospace;color:var(--muted)">мови: українська — вільно · англійська — робочий рівень</div>
+      </div>
+      <div style="padding:clamp(26px,5vw,40px) clamp(18px,4.6vw,56px)">
+        <div style="font:600 14px 'JetBrains Mono',monospace;color:var(--accent);margin-bottom:8px">## контакт<span style="animation:blink 1.2s steps(1) infinite">_</span></div>
+        <div style="font:400 13px 'IBM Plex Sans',sans-serif;color:var(--muted);margin-bottom:14px">Напишіть повідомлення — відповім на вашу пошту.</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <input ref="{{ emailRef }}" placeholder="Email" style="background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:12px 14px;font:400 14px 'IBM Plex Sans',sans-serif;color:var(--text);outline:none;width:100%;box-sizing:border-box">
+          <textarea ref="{{ msgRef }}" placeholder="Повідомлення" style="background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:12px 14px;font:400 14px 'IBM Plex Sans',sans-serif;color:var(--text);outline:none;min-height:84px;resize:vertical;width:100%;box-sizing:border-box"></textarea>
+          <button onclick="{{ sendMail }}" style="background:var(--accent);color:var(--onaccent);font:600 14px 'IBM Plex Sans',sans-serif;padding:12px;border:none;border-radius:8px;cursor:pointer;transition:background .15s,transform .12s" style-hover="background:var(--accent2)" style-active="transform:scale(.98)">$ надіслати</button>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><div style="display:flex;align-items:center;gap:8px;font:500 12.5px 'JetBrains Mono',monospace;color:var(--green);margin-top:2px"><span style="width:8px;height:8px;border-radius:50%;background:var(--green);display:block"></span>повідомлення надіслано — дякую, скоро відповім</div></sc-if>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- footer -->
+  <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:16px clamp(18px,4.6vw,56px);border-top:1px solid var(--line);font:400 11.5px 'JetBrains Mono',monospace;color:var(--faint)">
+    <span>© 2026 Vladyslav Pushyn</span>
+    <span><a href="https://github.com/HOKER1597" target="_blank" style="color:var(--faint)" style-hover="color:var(--accent)">github.com/HOKER1597</a> · <a href="https://www.linkedin.com/in/pushyn-vladyslav1597/" target="_blank" style="color:var(--faint)" style-hover="color:var(--accent)">linkedin.com/in/pushyn-vladyslav1597</a> · <a href="https://t.me/acc0unt_nam3" target="_blank" style="color:var(--faint)" style-hover="color:var(--accent)">t.me/acc0unt_nam3</a></span>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#d97757&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#d97757&quot;,&quot;#58a6ff&quot;,&quot;#3fb950&quot;,&quot;#c9a5ff&quot;],&quot;section&quot;:&quot;Вигляд&quot;},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;en&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;uk&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Поведінка&quot;},&quot;defaultTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;dark&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Поведінка&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { lang: null, theme: null, sent: false };
+    this.emailRef = React.createRef();
+    this.msgRef = React.createRef();
+  }
+
+  componentDidMount() {
+    try {
+      var l = localStorage.getItem('pushyn-cv-lang');
+      var t = localStorage.getItem('pushyn-cv-theme');
+      if (l || t) this.setState({ lang: l, theme: t });
+    } catch (e) {}
+  }
+
+  renderVals() {
+    var self = this;
+    var lang = this.state.lang || this.props.defaultLang || 'en';
+    var theme = this.state.theme || this.props.defaultTheme || 'dark';
+
+    function setLang(l) {
+      self.setState({ lang: l });
+      try { localStorage.setItem('pushyn-cv-lang', l); } catch (e) {}
+    }
+
+    function langBtn(active) {
+      var s = {
+        font: "600 12px 'JetBrains Mono',monospace",
+        padding: '4px 10px',
+        borderRadius: '6px',
+        cursor: 'pointer',
+        userSelect: 'none',
+        transition: 'background .15s,color .15s'
+      };
+      if (active) { s.background = 'var(--line2)'; s.color = 'var(--text)'; }
+      else { s.color = 'var(--muted)'; }
+      return s;
+    }
+
+    return {
+      theme: theme,
+      themeLabel: theme,
+      isEN: lang === 'en',
+      isUK: lang === 'uk',
+      enBtnStyle: langBtn(lang === 'en'),
+      uaBtnStyle: langBtn(lang === 'uk'),
+      accentColor: this.props.accentColor,
+      emailRef: this.emailRef,
+      msgRef: this.msgRef,
+      setEN: function () { setLang('en'); },
+      setUA: function () { setLang('uk'); },
+      toggleTheme: function () {
+        var next = theme === 'dark' ? 'light' : 'dark';
+        self.setState({ theme: next });
+        try { localStorage.setItem('pushyn-cv-theme', next); } catch (e) {}
+      },
+      sent: this.state.sent,
+      sendMail: function () {
+        var email = self.emailRef.current ? self.emailRef.current.value : '';
+        var text = self.msgRef.current ? self.msgRef.current.value : '';
+        var done = function () {
+          if (self.emailRef.current) self.emailRef.current.value = '';
+          if (self.msgRef.current) self.msgRef.current.value = '';
+          self.setState({ sent: true });
+          if (self._sentTimer) clearTimeout(self._sentTimer);
+          self._sentTimer = setTimeout(function () { self.setState({ sent: false }); }, 5000);
+        };
+        try {
+          fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ 'form-name': 'contact', email: email, text: text }).toString() }).then(done).catch(done);
+        } catch (e) { done(); }
+      }
+    };
+  }
+}
+</script>
+
+
+
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="contact">
+  <input type="email" name="email">
+  <textarea name="text"></textarea>
+  <input name="bot-field">
+</form>
+</body></html>
